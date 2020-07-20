@@ -1,0 +1,8 @@
+<form>
+  <div class="select">
+    <select class="form-control form-control-lg text-white bg-dark"  >
+      <option *ngFor="let d of data" (click)="states(d)" [value]="d">
+        {{d.state }}</option>
+    </select>
+  </div>
+</form>
