@@ -1,8 +1,13 @@
 <form>
   <div class="select">
-    <select class="form-control form-control-lg text-white bg-dark"  >
-      <option *ngFor="let d of data" (click)="states(d)" [value]="d">
-        {{d.state }}</option>
+    <select (change)="states($event)"  class="form-control form-control-lg text-white bg-dark"  >
+      <option>Select Indian States</option>
+      <option *ngFor="let d of data " value="{{d |json}}" >
+        {{d.state}}</option>
     </select>
   </div>
 </form>
+
+<!-- <div *ngFor="let d of selectedData"> -->
+<h1>{{selectedData}}</h1>
+<!-- </div> -->

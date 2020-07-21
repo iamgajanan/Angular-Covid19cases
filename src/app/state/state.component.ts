@@ -12,14 +12,16 @@ export class StateComponent implements OnInit {
   global
   selectedIndex
   dat=[]
-  selectedData=[]
+  selectedData
   daaaaa
   stateList=[]
   stateForm:FormGroup
   constructor(private service:Covid19Service,private fb:FormBuilder) {
     this.service.getState().subscribe(response=>{
-      // console.log(response)
+      console.log(response)
       this.data=response
+      // const values = Object.keys(response).map(it => response[it])
+      // console.log(values)
       // console.log(JSON.stringify(this.data))
       // this.global=JSON.stringify(this.data)
       // console.log(this.global)
@@ -34,7 +36,10 @@ this.stateForm=this.fb.group(
   }
 )
   }
-  states(d){
-    console.log(d)
+  states(event){
+    // console.log(d)
+    this.selectedData=event.target.value
+    console.log((this.selectedData))
+    // var districtData=this.selectedData.
   }
 }
