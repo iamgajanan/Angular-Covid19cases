@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Covid19Service {
+  //  Day one to last India data 
+  // https://api.covid19api.com/total/dayone/country/India
 private getalldata="https://api.covid19api.com/summary"
 private getDistricturl="https://api.covid19india.org/state_district_wise.json"
 private getStateurl="https://covid-india-cases.herokuapp.com/states"

@@ -8,6 +8,7 @@ import { Covid19Service } from '../covid19.service';
 })
 export class IndiaComponent implements OnInit {
   data
+  Date
   global
   constructor(private service:Covid19Service) {
     this.getIndia()
@@ -20,7 +21,8 @@ export class IndiaComponent implements OnInit {
       console.log(response)
       this.data=response
       this.global=this.data.Countries[76]
-      console.log(this.global.TotalConfirmed.toLocaleString('en-IN'))
+      this.Date=this.data.Date
+      console.log(this.Date)
     })
   }
 }

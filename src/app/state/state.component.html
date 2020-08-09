@@ -10,13 +10,13 @@
 </form>
 <!-- <div *ngFor="let d of selectedData"> -->
 <div class="world" *ngIf="show">
-  <h2 style="text-align: center; margin-top: 20px;">Covid-19 cases {{daaaaa &&  daaaaa[0].state}}</h2>
+  <h2 style="text-align: center; margin-top: 20px;">Covid-19 cases in {{daaaaa &&  daaaaa[0].state}}</h2>
 <div class="row">
   <div class="col-sm-6">
     <div class="card text-white bg-dark mb-3" id="card">
       <div class="card-body">
           
-        <h3 class="card-title">Total Confirmed Cases</h3>
+        <h3 class="card-title">Total Confirmed </h3>
         <h2 class="card-text">{{daaaaa &&  daaaaa[0].noOfCases.toLocaleString('en-IN')}}</h2>
         <!-- <p class="card-text" style="text-align: center;">
           <img  src="../../assets/up-arrow (2).png">
@@ -38,7 +38,7 @@
   <div class="col-sm-6">
     <div class="card text-black bg-warning mb-3">
       <div class="card-body">
-      <h3 class="card-title">Total Active cases</h3>
+      <h3 class="card-title">Total Active </h3>
       <h2 class="card-text">{{((daaaaa &&  daaaaa[0].noOfCases)-(daaaaa &&  daaaaa[0].cured +  daaaaa[0].deaths)).toLocaleString("en-IN")}}</h2>
       </div>
   </div>
