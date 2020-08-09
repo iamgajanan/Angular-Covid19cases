@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Covid19Service } from '../covid19.service';
 import { FormBuilder ,FormGroup, Validators} from '@angular/forms';
-import { Console } from 'console';
 
 @Component({
   selector: 'app-state',
@@ -15,6 +14,7 @@ export class StateComponent implements OnInit {
   dat=[]
   selectedData
   daaaaa
+  show:boolean=false
   stateList=[]
   stateForm:FormGroup
   constructor(private service:Covid19Service,private fb:FormBuilder) {
@@ -48,6 +48,13 @@ this.stateForm=this.fb.group(
   this.daaaaa= this.data.filter((d)=>d.state===this.selectedData
   )
   console.log(this.daaaaa[0].state)
+  if(JSON.stringify(this.data)!=null){
     // var districtData=this.selectedData.
+    if(this.daaaaa[0].state=== this.selectedData){
+      this.show=true
+    }
   }
+}
+  selected(index){
+    console.log(index)}
 }
