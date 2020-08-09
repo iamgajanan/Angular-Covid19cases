@@ -20,7 +20,7 @@ export class IndiaComponent implements OnInit {
       console.log(response)
       this.data=response
       this.global=this.data.Countries[76]
-      console.log(this.global.TotalConfirmed)
+      console.log(this.global.TotalConfirmed.toLocaleString('en-IN'))
     })
   }
 }

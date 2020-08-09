@@ -21,7 +21,7 @@ export class WorldComponent implements OnInit {
       console.log(response)
       this.data=response
       this.global=this.data.Global
-      console.log(this.global.TotalConfirmed)
+      console.log(this.global.TotalConfirmed.toLocaleString('en-IN'))
     })
 
   }

@@ -6,33 +6,35 @@
         <div class="card-body">
             
           <h3 class="card-title">Total Confirmed Cases</h3>
-          <h2 class="card-text">{{global.TotalConfirmed}}</h2>
+          <h2 class="card-text">{{global.TotalConfirmed.toLocaleString('en-IN')}}</h2>
           <p class="card-text" style="text-align: center;">
             <img  src="../../assets/up-arrow (2).png">
-            {{global.NewConfirmed}}</p>
+            {{global.NewConfirmed.toLocaleString('en-IN')}}</p>
         </div>
       </div>
     </div>
+    
     <div class="col-sm-6">
       <div class="card text-white bg-success mb-3">
         <div class="card-body">
           <h3 class="card-title">Total Recovered</h3>
-          <h2 class="card-text">{{global.TotalRecovered}}</h2>
+          <h2 class="card-text">{{global.TotalRecovered.toLocaleString('en-IN')}}</h2>
           <p class="card-text" style="text-align: center;">
             <img  src="../../assets/up-arrow.png">
-            {{global.NewRecovered}}</p>
+            {{global.NewRecovered.toLocaleString('en-IN')}}</p>
         </div>
       </div>
     </div>
-    <div class="col">
-        <!-- <div class="card text-black bg-warning mb-3">
-            <div class="card-body">
-            <h5 class="card-title">Total Active cases</h5>
-            <p class="card-text">{{global.TotalConfirmed}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div> -->
+
+    <div class="col-sm-6">
+        <div class="card text-black bg-warning mb-3">
+          <div class="card-body">
+          <h3 class="card-title">Total Active cases</h3>
+          <h2 class="card-text">{{(global.TotalConfirmed-(global.TotalRecovered + global.TotalDeaths )).toLocaleString('en-IN')}}</h2>
+          </div>
+      </div>
     </div>
+    
     <div class="col-sm-6">
         <div class="card text-white bg-danger mb-3">
             <div class="card-body">
@@ -44,9 +46,9 @@
         </div>
         </div>
     </div>
-    <div class="col">
+    <!-- <div class="col">
 
-    </div>
+    </div> -->
   </div>
 
   

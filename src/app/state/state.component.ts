@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Covid19Service } from '../covid19.service';
 import { FormBuilder ,FormGroup, Validators} from '@angular/forms';
+import { Console } from 'console';
 
 @Component({
   selector: 'app-state',
@@ -38,8 +39,15 @@ this.stateForm=this.fb.group(
   }
   states(event){
     // console.log(d)
-    this.selectedData=event.target.value
+    // this.selectedData=event.target.value.replace(/\n/g, '');
+    this.selectedData=event.target.value;
+
     console.log((this.selectedData))
+  //  console.log(this.data)
+ 
+  this.daaaaa= this.data.filter((d)=>d.state===this.selectedData
+  )
+  console.log(this.daaaaa[0].state)
     // var districtData=this.selectedData.
   }
 }

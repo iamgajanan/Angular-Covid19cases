@@ -2,12 +2,17 @@
   <div class="select">
     <select (change)="states($event)"  class="form-control form-control-lg text-white bg-dark"  >
       <option>Select Indian States</option>
-      <option *ngFor="let d of data " value="{{d |json}}" >
+      <option *ngFor="let d of data " value="{{d.state }}" >
         {{d.state}}</option>
     </select>
   </div>
 </form>
 
 <!-- <div *ngFor="let d of selectedData"> -->
-<h1>{{selectedData}}</h1>
+<h1>{{daaaaa &&  daaaaa[0].state}}</h1>
+<h1>{{daaaaa &&  daaaaa[0].cured}}</h1>
+<h1>{{daaaaa &&  daaaaa[0].deaths}}</h1>
+<h1>{{daaaaa &&  daaaaa[0].noOfCases}}</h1>
+
+<div></div>
 <!-- </div> -->

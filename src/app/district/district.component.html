@@ -1,0 +1,15 @@
+<form>
+    <div class="select">
+      <select (change)="states($event)"  class="form-control form-control-lg text-white bg-dark"  >
+        <option>Select Indian States</option>
+        <option *ngFor="let d of data" value="{{d |json}}" >
+          {{d}}</option>
+      </select>
+
+      <select (change)="dist($event)"  class="form-control form-control-lg text-white bg-dark"  >
+        <option>Select District</option>
+        <option *ngFor="let d of data " value="{{d |json}}" >
+          {{d}}</option>
+      </select>
+    </div>
+  </form>

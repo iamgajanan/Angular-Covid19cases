@@ -9,13 +9,15 @@ import { WorldComponent } from './world/world.component';
 import {HttpClientModule} from '@angular/common/http';
 import { IndiaComponent } from './india/india.component';
 import { StateComponent } from './state/state.component';
+import { DistrictComponent } from './district/district.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WorldComponent,
     IndiaComponent,
-    StateComponent
+    StateComponent,
+    DistrictComponent
   ],
   imports: [
     BrowserModule,
