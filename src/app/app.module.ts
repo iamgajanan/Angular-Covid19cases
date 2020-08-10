@@ -23,7 +23,10 @@ import { DistrictComponent } from './district/district.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

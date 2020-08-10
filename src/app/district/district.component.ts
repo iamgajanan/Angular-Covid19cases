@@ -17,6 +17,7 @@ export class DistrictComponent implements OnInit {
     daaaaa
     arry
     stateList=[]
+    distArray=[]
     stateForm:FormGroup
   constructor(private service:Covid19Service,private fb:FormBuilder) {
     this.service.getDistrict().subscribe(response=>{
